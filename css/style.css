@@ -1,29 +1,111 @@
-* {
-  font-family: ‘SUIT’, sans-serif, AppleSDGothic !important;
+@import './all.min.css';
+@import './base.css';
+@import './main.css';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600&display=swap');
+@import url('../src/font/Paysage-Black.woff');
+@import url('../src/font/Paysage-Bold.woff');
+@import url('../src/font/Paysage-Medium.woff');
+@import url('../src/font/Paysage-Regular.woff');
+@import url('../src/font/Messapia-Bold.woff');
+@import url('../src/font/Messapia-Regular.woff');
+@font-face {
+  font-family: 'Authentic Sans';
+  src: url('../src/font/AUTHENTICSans-130.otf') format('otf');
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 200;
+  font-display: swap;
+  src: url('../src/font/Pretendard-Regular.otf') format('off');
 }
 
+:root {
+  --grad: linear-gradient(
+    155deg,
+    var(--amethystSmoke) 0%,
+    #cedae648 57%,
+    #c5b08950 100%
+  );
+  --textShadow: 34px -20px 8px rgba(116, 116, 116, 0.5);
+  --shadow: #00000086 5%, #00000069 15%, #5252527e 30%, #ffffff00 70%;
+  --white: #fdf4f2;
+  --roseFog: #dfb9b3;
+  --brandyRose: #b48688;
+  --spicyPink: #816d70;
+  --amethystSmoke: #a290a2;
+  --monsoon: #887d86;
+  --martini: #aea19e;
+  --tuatara: #3d3c3f;
+}
+/*************************      body & global          *************************/
 body {
-  /* width: 100%; */
+  width: 100%;
+  font-family: ‘SUIT’, sans-serif, AppleSDGothic !important;
   height: 100vh;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: hidden;
 }
 
 .wrapper {
-  width: 600px;
+  /* overflow: hidden; */
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+
   height: 500vh;
   /* border: 15px solid rgba(255, 241, 212, 0.76); */
-  background: linear-gradient(225deg, #71d9ec75 0%, #d679547a 100%) no-repeat
-    center;
+  background: linear-gradient(
+      165deg,
+      rgba(130, 128, 255, 0.281) 0%,
+      #d3725598 25%,
+      #edf04c4d 70%,
+      #4eb8ff75 100%
+    )
+    no-repeat center;
 }
 
-.main {
-  /* margin: 5px 0 5px 5px; */
-  border: 15px solid rgba(255, 241, 212, 0.76);
-  border-right: unset;
+.title {
+  font-family: 'SUIT';
 }
+h1.title {
+  font-family: 'Messapia-Regular';
+  font-style: italic;
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+h3.title {
+  /* font-style: italic; */
+  font-size: 1.2em;
+}
+/*************************      (1st page)          *************************/
+
 .about {
   border: 15px solid rgba(255, 241, 212, 0.76);
   border-right: unset;
   border-left: unset;
+}
+/*************************      responsive          *************************/
+
+@media (max-width: 2400px) {
+  .wrapper {
+    width: 25%;
+  }
+}
+@media (max-width: 1800px) {
+  .wrapper {
+    width: 33.333%;
+  }
+}
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+  }
 }
