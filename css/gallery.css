@@ -1,8 +1,30 @@
 /*************************      gallery(3rd page)          *************************/
 
 .gallery {
+  display: flex;
+  flex-direction: column;
   border: 15px solid var(--tuatara);
   border-right: unset;
   border-left: unset;
   box-shadow: 10px 55px 50px 55px #444444a2;
+}
+.gallery .content {
+  overflow-y: scroll;
+}
+
+.album {
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+}
+.frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aqua;
+  /* width: 30%; */
+  /* height: 40%; */
 }

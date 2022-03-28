@@ -1,8 +1,36 @@
 /*************************      about(2nd page)          *************************/
 
 .about {
+  display: flex;
+  flex-direction: column;
   border: 15px solid var(--tuatara);
   border-right: unset;
   border-left: unset;
   box-shadow: 10px 55px 50px 55px #444444a2;
+}
+.about .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tarot {
+  position: relative;
+  margin-top: 5em;
+  width: 15em;
+  height: 20em;
+  background-color: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(189, 189, 189);
+}
+.tarot img {
+  width: 12.5em;
+  height: 18em;
+  object-fit: fill;
+  position: absolute;
+  filter: grayscale(1) contrast(1.8);
 }
