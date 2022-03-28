@@ -1,6 +1,8 @@
 @import './all.min.css';
 @import './base.css';
 @import './main.css';
+@import './about.css';
+@import './gallery.css';
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600&display=swap');
 @import url('../src/font/Paysage-Black.woff');
@@ -30,7 +32,7 @@
   --textShadow: 34px -20px 8px rgba(116, 116, 116, 0.5);
   --shadow: #00000086 5%, #00000069 15%, #5252527e 30%, #ffffff00 70%;
   --white: #fdf4f2;
-  --roseFog: #dfb9b3;
+  --vanilla: rgba(255, 247, 230, 0.801);
   --brandyRose: #b48688;
   --spicyPink: #816d70;
   --amethystSmoke: #a290a2;
@@ -40,8 +42,9 @@
 }
 /*************************      body & global          *************************/
 body {
+  position: relative;
   width: 100%;
-  font-family: ‘SUIT’, sans-serif, AppleSDGothic !important;
+  font-family: 'Paysage-Black', AppleSDGothic !important;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -50,43 +53,62 @@ body {
 }
 
 .wrapper {
+  width: 25%;
   /* overflow: hidden; */
   display: flex;
   /* align-items: center; */
   flex-direction: column;
 
   height: 500vh;
-  /* border: 15px solid rgba(255, 241, 212, 0.76); */
+  border: 15px solid var(--tuatara);
+  /* background-color: var(--vanilla); */
   background: linear-gradient(
       165deg,
-      rgba(130, 128, 255, 0.281) 0%,
-      #d3725598 25%,
-      #edf04c4d 70%,
-      #4eb8ff75 100%
+      rgba(241, 241, 255, 0.281) 0%,
+      #d3725598 25%
     )
     no-repeat center;
 }
 
+.btn__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 40em;
+  width: 100%;
+}
+.btn {
+  font-size: 6.5em;
+  z-index: 9999;
+}
+.bt-prev {
+  /* margin-left: 0.5em; */
+}
+.bt-next {
+  /* margin-right: 0.5em; */
+}
 .title {
   font-family: 'SUIT';
 }
 h1.title {
-  font-family: 'Messapia-Regular';
+  font-family: 'Paysage-Black';
   font-style: italic;
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 1em 0;
 }
 h3.title {
-  /* font-style: italic; */
+  font-family: 'Pretendard';
   font-size: 1.2em;
+}
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2em 0;
 }
 /*************************      (1st page)          *************************/
 
-.about {
-  border: 15px solid rgba(255, 241, 212, 0.76);
-  border-right: unset;
-  border-left: unset;
-}
 /*************************      responsive          *************************/
 
 @media (max-width: 2400px) {

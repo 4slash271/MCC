@@ -1,0 +1,8 @@
+/*************************      about(2nd page)          *************************/
+
+.about {
+  border: 15px solid var(--tuatara);
+  border-right: unset;
+  border-left: unset;
+  box-shadow: 10px 55px 50px 55px #444444a2;
+}
