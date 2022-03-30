@@ -1,0 +1,108 @@
+.play {
+  display: flex;
+  flex-direction: column;
+  border: 15px solid var(--tuatara);
+  border-right: unset;
+  border-left: unset;
+  box-shadow: 10px 55px 50px 55px #444444a2;
+}
+.play .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* .paint__title {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 1em 0;
+}
+.paint__title__text {
+  position: absolute;
+  right: -1em;
+  font-family: 'Messapia-Regular';
+} */
+
+.paint__wrap {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 2em;
+}
+/***************************/
+.imgPop {
+  z-index: 99;
+  position: absolute;
+  left: 0;
+}
+#imgPop--stage {
+  position: relative;
+}
+.imgPop--btn {
+  position: absolute;
+  background-color: rgb(150, 173, 164);
+  font-size: 1.3em;
+  width: 3.2em;
+  height: 2em;
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+}
+
+#show-img {
+  width: 30em;
+  transform: translateX(-30em);
+  transition: transform 1s ease-in-out;
+}
+.pop {
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out;
+}
+/********************  imgPop  *************************/
+#c {
+  z-index: 1;
+  height: 30em;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 2px 3px 10px -1px rgba(114, 114, 114, 0.47);
+}
+.canvas {
+  position: relative;
+}
+.paint__controls {
+  z-index: 3;
+  position: absolute;
+  /* border: 1px solid red; */
+  height: 2.2em;
+  right: 1em;
+  bottom: 0;
+}
+.paint__btns {
+}
+.paint__btn {
+  all: unset;
+  width: 2.2em;
+  height: 2.2em;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid #d4d4d4;
+  box-shadow: 2px 3px 10px -1px rgba(114, 114, 114, 0.47);
+  background-color: #ffffff;
+  color: #6e6e6e;
+}
+.paint__btn > i {
+  color: rgba(109, 109, 109, 0.815);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.controls__colors .controls__color img {
+  cursor: pointer;
+  margin: 1px;
+}

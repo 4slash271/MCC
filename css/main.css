@@ -5,12 +5,50 @@
   align-items: center;
   flex-direction: column;
   /* margin: 5px 0 5px 5px; */
-  border: 15px solid rgba(0, 0, 0, 0.76);
-  border-right: unset;
+  border-left: 20px solid var(--red);
+
   box-shadow: 0px 5px 50px 30px #444444a2;
+  background-color: var(--tuatara) !important;
 }
 .main .header {
   margin: 2em 0;
+}
+.main .header .title {
+  color: var(--white);
+}
+.main .header h1.title::after {
+  content: '';
+  display: block;
+  margin-top: 0.3em;
+  width: 100%;
+  height: 3px;
+  background-color: var(--red);
+}
+.main .header .title ul {
+  display: flex;
+}
+.main .header .title li {
+  font-family: 'Pretendard';
+  font-size: 1.2em;
+  margin-left: 0.8em;
+}
+.main .header .title li::after {
+  margin-left: 2.5em;
+  margin-top: -0.8em;
+  content: '';
+  display: block;
+  width: 3px;
+  height: 15px;
+  background-color: var(--red);
+}
+.main .header .title li:nth-child(3):after {
+  margin-left: 3.5em;
+  margin-top: -0.8em;
+  content: '';
+  display: block;
+  width: 3px;
+  height: 15px;
+  background-color: var(--red);
 }
 .main .content {
   margin: 1em;
@@ -18,13 +56,10 @@
   height: 72vh;
   border: 1px solid var(--tuatara);
 }
-/* .stage {
-  position: absolute;
-  top: 12em;
-  left: 0em;
-  z-index: 999;
-  width: 100%;
-  height: 20em;
-  background-color: rgba(255, 255, 255, 0.418);
-  /* border-radius: 50%; */
-} */
+.main .footer .credit {
+  font-family: 'Paysage-regular';
+  font-style: italic;
+  font-size: 1.2em;
+  color: var(--white);
+  letter-spacing: 0.1em;
+}

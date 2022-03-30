@@ -15,9 +15,9 @@
 }
 .tarot {
   position: relative;
-  margin-top: 5em;
-  width: 15em;
-  height: 20em;
+  margin-top: 10em;
+  width: 210px;
+  height: 360px;
   background-color: var(--white);
   border-radius: 20px;
   overflow: hidden;
@@ -25,12 +25,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgb(189, 189, 189);
+  border: 15px solid var(--white);
+  padding: 0;
+  margin: 0;
+  background-color: var(--tuatara);
+  background-size: 24px 24px;
+  background-image: radial-gradient(
+      transparent 10px,
+      #ffffff 10px,
+      #ffffff 12px,
+      transparent 12px
+    ),
+    radial-gradient(
+      transparent 10px,
+      #ffffff 12px,
+      #ffffff 12px,
+      transparent 12px
+    );
+  background-position: 0 0, 12px 24px;
 }
-.tarot img {
+/* .tarot img {
   width: 12.5em;
   height: 18em;
   object-fit: fill;
   position: absolute;
   filter: grayscale(1) contrast(1.8);
+} */
+.tarot:hover {
+  cursor: pointer;
+  transform: scale(105%);
+  box-shadow: 5px 0px 25px 5px rgba(255, 30, 0, 0.432);
 }

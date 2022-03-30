@@ -3,6 +3,7 @@
 @import './main.css';
 @import './about.css';
 @import './gallery.css';
+@import './play.css';
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600&display=swap');
 @import url('../src/font/Paysage-Black.woff');
@@ -38,7 +39,8 @@
   --amethystSmoke: #a290a2;
   --monsoon: #887d86;
   --martini: #aea19e;
-  --tuatara: #3d3c3f;
+  --tuatara: #3f3434;
+  --red: rgba(255, 30, 0, 0.76);
 }
 /*************************      body & global          *************************/
 body {
@@ -49,7 +51,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 .wrapper {
@@ -60,14 +62,14 @@ body {
   flex-direction: column;
 
   height: 500vh;
-  border: 15px solid var(--tuatara);
+  border: 1px solid var(--tuatara);
   /* background-color: var(--vanilla); */
-  background: linear-gradient(
+  /* background: linear-gradient(
       165deg,
       rgba(241, 241, 255, 0.281) 0%,
       #d3725598 25%
     )
-    no-repeat center;
+    no-repeat center; */
 }
 .content {
   margin: 3em;
@@ -110,7 +112,7 @@ h3.title {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 6em 0;
+  margin: 6em 0 0 0;
 }
 /*************************                *************************/
 
