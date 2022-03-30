@@ -76,6 +76,7 @@ body {
   width: 90%;
   height: 80vh;
   border: 1px solid var(--tuatara);
+  overflow: hidden;
 }
 .btn__wrapper {
   display: flex;
