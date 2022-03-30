@@ -1,7 +1,9 @@
 const canvas = new fabric.Canvas('c');
 const ctx =canvas.getContext('2d');
 const saveBtn = document.getElementById("jsSave");
-const mode = document.getElementById("jsMode");
+const undo = document.getElementById('jsUndo');
+const mode = document.getElementById('jsMode');
+
 let drawing = false;     
 let moving = false;     
 
@@ -17,15 +19,6 @@ ctx.fillStyle = "white";
 
 
 
-if (fabric.PatternBrush) {
-  const vLinePatternBrush = new fabric.PatternBrush(canvas);
-  vLinePatternBrush.getPatternSrc = function() {
-    const patternCanvas = fabric.document.createElement('canvas');
-    patternCanvas.width = patternCanvas.height = 10;
-    return patternCanvas;
-  };
-  };
-
 function handleModeClick(){
  canvas.isDrawingMode = !canvas.isDrawingMode;
     if(moving === true){//1. filling의 데이터 유형과 true의 데이터 유형이 같고 value가 같으면 다음을 리턴하라.
@@ -38,16 +31,10 @@ function handleModeClick(){
         mode.innerHTML = '<i class="far fa-hand-paper"></i>';
        }
  }
-function handleUndo(event){
 
-}
 function handleCM(event){
       event.preventDefault();
     }
-      
-
-//mousedown 마우스 포인터가 포인팅 장치를 누를 때
-//mouseup 마우스 포인터가 클릭 상태를 해제할 때
 
 if(mode){
   mode.addEventListener("click",handleModeClick);
