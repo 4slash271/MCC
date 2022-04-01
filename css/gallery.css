@@ -3,7 +3,8 @@
 .gallery {
   display: flex;
   flex-direction: column;
-  border: 15px solid var(--tuatara);
+  border-top: 20px solid var(--red) !important;
+  border-bottom: 20px solid var(--red) !important;
   border-right: unset;
   border-left: unset;
   box-shadow: 10px 55px 50px 55px #444444a2;
@@ -13,9 +14,9 @@
 }
 
 .album {
-  gap: 20px;
+  /* gap: 20px; */
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   /* grid-template-rows: 1fr 1fr 1fr 1fr; */
@@ -25,6 +26,17 @@
   flex-direction: column;
   align-items: center;
   background-color: aqua;
-  /* width: 30%; */
-  /* height: 40%; */
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+.desc {
+  z-index: 3;
+  position: absolute;
+  bottom: 3em;
+  font-size: 1em;
+  background-color: var(--tuatara);
+  color: var(--white);
+  left: 5%;
 }

@@ -1,7 +1,8 @@
 .play {
   display: flex;
   flex-direction: column;
-  border: 15px solid var(--tuatara);
+  border-top: 20px solid var(--red) !important;
+  border-bottom: 20px solid var(--red) !important;
   border-right: unset;
   border-left: unset;
   box-shadow: 10px 55px 50px 55px #444444a2;
