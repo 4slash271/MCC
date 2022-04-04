@@ -53,6 +53,28 @@ body {
   flex-wrap: wrap;
   /* overflow-y: hidden; */
 }
+* {
+  cursor: url(http://circulardev.com/nike/cortez/dist/images/cortez-pointer.png),
+    auto;
+  cursor: -webkit-image-set(url(http://circulardev.com/nike/cortez/dist/images/cortez-pointer.png) 1x, url(http://circulardev.com/nike/cortez/dist/images/cortez-pointer@2x.png) 2x), auto;
+}
+
+* a:hover,
+* a:hover * {
+  cursor: url(http://circulardev.com/nike/cortez/dist/images/cortez-pointer-hover.png),
+    auto;
+  cursor: -webkit-image-set(url(http://circulardev.com/nike/cortez/dist/images/cortez-pointer-hover.png) 1x, url(http://circulardev.com/nike/cortez/dist/images/cortez-pointer-hover@2x.png) 2x), auto;
+}
+
+body {
+  background: #ddd;
+}
+
+#wrap a {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 20px 50px;
+}
 
 .wrapper {
   width: 25%;
