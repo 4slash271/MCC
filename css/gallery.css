@@ -1,13 +1,14 @@
 /*************************      gallery(3rd page)          *************************/
 
 .gallery {
+  z-index: 0;
   background-color: var(--white);
   position: absolute;
   right: 17%;
   display: none;
   flex-direction: column;
-  border-top: 20px solid var(--red) !important;
-  border-bottom: 20px solid var(--red) !important;
+  border-top: 15px solid var(--red) !important;
+  border-bottom: 15px solid var(--red) !important;
   border-right: unset;
   border-left: unset;
   box-shadow: 10px 55px 50px 55px #444444a2;
