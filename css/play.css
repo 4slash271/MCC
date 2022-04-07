@@ -1,5 +1,8 @@
 .play {
-  display: flex;
+  background-color: var(--white);
+  position: absolute;
+  right: 17%;
+  display: none;
   flex-direction: column;
   border-top: 20px solid var(--red) !important;
   border-bottom: 20px solid var(--red) !important;
@@ -50,4 +53,7 @@
 
 .palette--btn:hover {
   transform: scale(1.05);
+}
+.palette--btn:last-child {
+  cursor: url('../src/img/vase.cur'), auto;
 }

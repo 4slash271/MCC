@@ -1,7 +1,10 @@
 /*************************      gallery(3rd page)          *************************/
 
 .gallery {
-  display: flex;
+  background-color: var(--white);
+  position: absolute;
+  right: 17%;
+  display: none;
   flex-direction: column;
   border-top: 20px solid var(--red) !important;
   border-bottom: 20px solid var(--red) !important;

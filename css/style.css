@@ -39,41 +39,37 @@
   --amethystSmoke: #a290a2;
   --monsoon: #887d86;
   --martini: #aea19e;
-  --tuatara: #3f3434;
+  --tuatara: #2e2929;
   --red: rgba(255, 30, 0, 0.76);
 }
 /*************************      body & global          *************************/
 body {
+  /* background-color: var(--red); */
   position: relative;
   width: 100%;
   font-family: 'Paysage-Black', AppleSDGothic !important;
   height: 100vh;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   /* overflow-y: hidden; */
 }
 * {
   cursor: url('../src/img/cursor.cur'), auto;
-}
-body {
-  background: #ddd;
-}
-
-#wrap a {
-  display: inline-block;
-  background-color: #ffffff;
-  padding: 20px 50px;
+  cursor: -webkit-image-set(url('../src/img/cursor.cur')) 128 128;
 }
 
 .wrapper {
-  width: 25%;
+  height: 90%;
+  width: 33%;
   /* overflow: hidden; */
   display: flex;
   /* align-items: center; */
   flex-direction: column;
 
-  height: 500vh;
+  /* height: 500vh; */
   border: 1px solid var(--tuatara);
   /* background-color: var(--vanilla); */
   /* background: linear-gradient(
@@ -86,7 +82,7 @@ body {
 .content {
   margin: 3em auto;
   width: 90%;
-  height: 80vh;
+  height: 80%;
   border: 1px solid var(--tuatara);
   overflow: hidden;
 }
@@ -102,11 +98,16 @@ body {
   font-size: 6.5em;
   z-index: 9999;
 }
+.btn:hover {
+  cursor: url('../src/img/hand.cur'), auto;
+  transform: scale(1.2);
+  cursor: -webkit-image-set(url('../src/img/hand.cur')) 128 128;
+}
 .bt-prev {
-  /* margin-left: 0.5em; */
+  margin-left: 1.5em;
 }
 .bt-next {
-  /* margin-right: 0.5em; */
+  margin-right: 1.5em;
 }
 .title {
   font-family: 'SUIT';
@@ -114,7 +115,7 @@ body {
 h1.title {
   font-family: 'Paysage-Black';
   font-style: italic;
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 1em 0;
 }
 h3.title {
@@ -125,12 +126,12 @@ h3.title {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 7em 0 0 0;
+  margin: 4em 0 0 0;
 }
 /*************************                *************************/
 
 /*************************      responsive          *************************/
-
+/* 
 @media (max-width: 2400px) {
   .wrapper {
     width: 25%;
@@ -150,4 +151,4 @@ h3.title {
   .wrapper {
     width: 100%;
   }
-}
+} */
