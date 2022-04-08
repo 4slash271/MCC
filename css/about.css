@@ -24,17 +24,16 @@
 }
 .tarot {
   cursor: url('../src/img/hand.cur'), auto;
-
   transform: rotate(0deg);
   position: absolute;
-  top: 0em;
-  left: -3.5em;
+  top: 4em;
+  right: -6.5em;
   margin: 0 auto;
-  width: 110px;
-  height: 188px;
+  width: 200px;
+  height: 330px;
   background-color: var(--white);
   border-radius: 10px;
-  border: 7px solid rgb(255, 255, 255);
+  border: 3px solid rgb(255, 255, 255);
   background: url('../src/img/tarot_back.png') no-repeat center;
   background-size: cover;
   box-shadow: 0px 0px 1px 1px rgba(161, 161, 161, 0.199);
@@ -55,17 +54,55 @@
   box-shadow: 5px 0px 25px 5px rgba(255, 30, 0, 0.432);
 }
 .tarot__deck:hover .tarot:first-child {
-  transform: rotate(25deg);
-  top: 1.2em;
-  left: -2em;
+  transform: rotate(10deg);
+  top: 5em;
+  left: -4em;
 }
 .tarot__deck:hover .tarot:nth-child(2) {
-  transform: rotate(3deg);
-  top: 1em;
-  left: -4em;
+  transform: rotate(-15deg);
+  top: 5em;
+  left: -6em;
 }
 .tarot__deck:hover .tarot:last-child {
   transform: rotate(-30deg);
-  top: 2em;
-  left: -6em;
+  top: 6em;
+  left: -10em;
+}
+
+.modal--tarot {
+  display: none;
+  position: absolute;
+  top: 10em;
+  left: 1em;
+  z-index: 3;
+  width: 90%;
+  height: 60%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -1px 2px 28px 5px #fff;
+  /* border: 1px solid red; */
+}
+.modal--tarot .tarot {
+  background: url('../src/img/magician.png') no-repeat center;
+  background-size: cover;
+  position: absolute;
+  top: 5em;
+  left: -20em;
+  width: 150px;
+  height: 240px;
+  border-radius: 10px;
+  border: 7px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 1px 1px rgba(161, 161, 161, 0.199);
+}
+.modal--tarot .tarot__desc {
+  position: absolute;
+  top: 5em;
+  left: 45%;
+  width: 220px;
+  height: 240px;
+  letter-spacing: 0.05em;
+}
+.modal--tarot .bt-close {
+  position: absolute;
+  right: 0;
+  bottom: 3em;
 }

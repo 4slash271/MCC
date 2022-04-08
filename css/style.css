@@ -22,7 +22,10 @@
   font-display: swap;
   src: url('../src/font/Pretendard-Regular.otf') format('off');
 }
-
+* {
+  cursor: url('../src/img/cursor.cur'), auto;
+  cursor: -webkit-image-set(url('../src/img/cursor.cur')) 128 128;
+}
 :root {
   --grad: linear-gradient(
     155deg,
@@ -44,6 +47,8 @@
 }
 /*************************      body & global          *************************/
 body {
+  cursor: url('../src/img/cursor.cur'), auto;
+  cursor: -webkit-image-set(url('../src/img/cursor.cur')) 128 128;
   /* background-color: var(--red); */
   position: relative;
   width: 100%;
@@ -55,10 +60,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
   /* overflow-y: hidden; */
-}
-* {
-  cursor: url('../src/img/cursor.cur'), auto;
-  cursor: -webkit-image-set(url('../src/img/cursor.cur')) 128 128;
 }
 
 .wrapper {
@@ -83,7 +84,7 @@ body {
   margin: 3em auto;
   width: 90%;
   height: 80%;
-  border: 1px solid var(--tuatara);
+  /* border: 1px solid var(--tuatara); */
   overflow: hidden;
 }
 .btn__wrapper {
