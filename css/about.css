@@ -80,6 +80,7 @@
   background-color: rgb(255, 255, 255);
   box-shadow: -1px 2px 28px 5px #fff;
   /* border: 1px solid red; */
+  overflow: hidden;
 }
 .modal--tarot .tarot {
   position: absolute;
@@ -104,27 +105,25 @@
   right: 0;
   bottom: 3em;
 }
-.turnR {
-  animation: turnR 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-}
-.turnL {
-  animation: turnL 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  background: url('../src/img/magician.png') no-repeat center;
-  background-size: cover;
+.turn-card {
+  animation: turn-card 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
-@keyframes turnR {
+.slideUp {
+  animation: slideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes slideUp {
   0% {
-    -webkit-transform: rotateY(0);
-    transform: rotateY(0);
+    -webkit-transform: translateY(0) rotateX(0deg);
+    transform: translateY(0) rotateX(0deg);
   }
   100% {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+    -webkit-transform: translateY(-150px) rotateX(-90deg);
+    transform: translateY(-150px) rotateX(-90deg);
   }
 }
 
-@keyframes turnL {
+@keyframes turn-card {
   0% {
     -webkit-transform: rotateY(0);
     transform: rotateY(0);
