@@ -7,22 +7,20 @@ let btnClose = document.querySelector('.modal--tarot .bt-close');
 
 function openTarot(){
     tarotModal.style.display="flex";
-    firstCard.style.display="flex";   
 };
+
 function slideFirst(){    
-    secondCard.style.display="flex";
     firstCard.style.display="none";
-    secondCard.classList.add("turn-card");  
+    secondCard.style.display="flex";
    }
+
 function slideSecond(){    
     secondCard.style.display="none";
-    lastCard.style.display="flex";
-    lastCard.classList.add("turn-card");  
+    lastCard.style.display="flex";   
    }
 
 function closeTarot(){
     tarotModal.style.display="none";
-    lastCard.style.display="none";
 };
 
 tarot.addEventListener('click', openTarot);
