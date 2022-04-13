@@ -71,26 +71,40 @@
 
 .modal--tarot {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 10em;
-  left: 1em;
+  top: 6em;
+  left: 0em;
   z-index: 3;
-  width: 90%;
-  height: 60%;
+  width: 100%;
+  height: 80%;
   background-color: rgb(255, 255, 255);
-  box-shadow: -1px 2px 28px 5px #fff;
-  /* border: 1px solid red; */
   overflow: hidden;
 }
-.modal--tarot .tarot {
-  position: absolute;
-  top: 5em;
-  left: -20em;
+.modal--tarot .tarot__inner {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+  height: 240px;
+  margin-bottom: 1em;
+}
+.modal--tarot .tarot1,
+.modal--tarot .tarot2,
+.modal--tarot .tarot3 {
+  cursor: url('../src/img/hand.cur'), auto;
   width: 150px;
   height: 240px;
   border-radius: 10px;
   border: 7px solid rgb(255, 255, 255);
   box-shadow: 0px 0px 1px 1px rgba(161, 161, 161, 0.199);
+}
+.modal--tarot .tarot1:hover,
+.modal--tarot .tarot2:hover,
+.modal--tarot .tarot3:hover {
+  box-shadow: 2px 0px 10px 5px rgba(255, 30, 0, 0.432);
 }
 
 .tarot1 {
@@ -105,17 +119,34 @@
   animation: turn-card3 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 .modal--tarot .tarot__desc {
-  position: absolute;
-  top: 5em;
-  left: 45%;
-  width: 220px;
-  height: 240px;
-  letter-spacing: 0.05em;
+  margin-top: 1em;
+  width: 80%;
+  height: 180px;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
+}
+.modal--tarot .tarot__desc .desc--title {
+  /* font-size: 1.1em; */
+  font-weight: bold;
+}
+.modal--tarot .tarot__desc .desc--credit {
+  margin-top: 1em;
+  font-size: 0.8em;
+  line-height: 1.1em;
 }
 .modal--tarot .bt-close {
+  opacity: 0.8;
   position: absolute;
-  right: 0;
-  bottom: 3em;
+  top: 1em;
+  right: 8em;
+  transform: translateY(140%);
+  color: var(--black);
+  border-radius: 50%;
+  border: 0.5px solid #000;
+  padding: 0.15em;
+}
+.modal--tarot .bt-close:hover {
+  background-color: rgb(241, 130, 26);
 }
 
 @keyframes turn-card {
@@ -156,7 +187,7 @@
   100% {
     -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
-    background: url('../src/img/magician.png') no-repeat center;
+    background: url('../src/img/world.png') no-repeat center;
     background-size: cover;
   }
 }
