@@ -150,29 +150,40 @@
       <div class="content">
           
    
-            <div class="canvas">
+            <div class="canvas"> 
+                <canvas height="350" width="350" id="c">
+            </canvas>
               <div class="palette">
-            
+                 <button id="jsMode" class="palette--btn">
+                    <i class="far fa-hand-paper"></i>
+                </button>  
+                 <button id="jsDelete" class="palette--btn">
+                    <i class="fas fa-eraser"></i>
+                </button>  
                 <button id="jsUndo" class="palette--btn">  
                   <i class="fas fa-undo"></i>
                 </button>      
                 <button id="jsRedo" class="palette--btn">
                   <i class="fas fa-redo"></i>
                 </button>      
-                <button id="jsMode" class="palette--btn">
-                    <i class="far fa-hand-paper"></i>
-                </button>      
-                <button id="jsSend" class="palette--btn" type="button" onclick="downloadSVG()">
-                 <a href="malito:magic.creatures.constructor@gmail.com?subject="> <i class="fab fa-telegram-plane"></i></a>
-                </button>      
+                      
       
               </div>
-             <canvas height="500" width="500" id="c">
-            </canvas>
-      
-      
+            
             </div>
-         
+
+           <form class="mail">
+                <input class="play--writer"type="text" name="" id="" placeholder="닉네임" required/>
+                <input class="play--mail"type="email" name="" id="" placeholder="메일주소" required/>
+                <input class="play--address"type="text" name="" id="" placeholder="조각으로 완성된 후 배송됩니다. 배송예정지를 남겨주세요" required/>
+                <textarea autofocus="autofocus" class="play--message" name="" id="" cols="30" rows="10" placeholder="드로잉에 대한 설명을 남겨주세요." required></textarea>
+               
+            
+                <button value="submit" id="jsSend" class="play--send" onclick="downloadSVG()">
+                    <i class="fab fa-telegram-plane"></i></a>
+                   </button>  
+                </form>
+      
 
       </div>    
 </div>

@@ -15,36 +15,43 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 120em;
+  overflow: unset;
 }
 
 /********************  imgPop  *************************/
 #c {
-  width: 600px;
-  height: 600px;
   background-color: white;
-  border-radius: 15px;
-  box-shadow: 2px 3px 10px -1px rgba(114, 114, 114, 0.47);
+  border-radius: 8px;
+  box-shadow: 2px 3px 10px -1px rgba(172, 172, 172, 0.37);
+  border: 1px solid #a1a1a183;
 }
 .canvas {
+  width: 100%;
   position: relative;
+  display: flex;
+  justify-content: space-evenly;
 }
 .palette {
   z-index: 3;
-  position: absolute;
-  height: 2.2em;
-  right: 1em;
-  bottom: 0;
+  /* position: absolute; */
+  height: 12em;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .palette--btn {
   all: unset;
-  width: 2.2em;
-  height: 2.2em;
+  width: 2.5em;
+  height: 2.5em;
   text-align: center;
   cursor: pointer;
   border-radius: 8px;
   border: 1px solid #d4d4d4;
-  box-shadow: 2px 3px 10px -1px rgba(114, 114, 114, 0.47);
+  box-shadow: 2px 3px 10px -1px rgba(172, 172, 172, 0.37);
   background-color: #ffffff;
   color: #6e6e6e;
 }
@@ -57,4 +64,71 @@
 }
 .palette--btn:last-child {
   cursor: url('../src/img/vase.cur'), auto;
+}
+
+.mail {
+  float: left;
+  width: 95%;
+  height: 9em;
+  margin-top: 1em;
+  box-sizing: border-box;
+}
+.mail input,
+.play--message {
+  box-shadow: 2px 3px 10px -1px rgba(172, 172, 172, 0.37);
+  border-radius: 5px;
+  margin-bottom: 0.2em;
+  height: 2em;
+  border: 1px solid #a1a1a183;
+}
+.mail input:focus,
+.mail textarea:focus {
+  border: 1.5px solid rgba(248, 101, 81, 0.507);
+}
+input::placeholder,
+.play--message::placeholder {
+  color: rgba(70, 70, 70, 0.514);
+  font-style: italic;
+  font-size: 0.9em;
+  padding-left: 1em;
+}
+.play--writer {
+  width: 29.5%;
+}
+.play--mail {
+  width: 69.5%;
+}
+.play--address {
+  width: 100%;
+}
+.play--message {
+  display: inline-block;
+  width: 89%;
+  resize: both;
+  height: 6em;
+  border: 1px solid #a1a1a183;
+  resize: none;
+  padding: 1em 0 0 0;
+}
+.play--message span {
+  margin-left: 1em;
+}
+.play--message:focus,
+.play--message:hover {
+  border: 1px solid #a1a1a183;
+}
+.play--send {
+  border-radius: 5px;
+  position: absolute;
+  display: inline-block;
+  margin-left: 0.3em;
+  padding: 0;
+  width: 8%;
+  height: 6em;
+  border: 1px solid #a1a1a183;
+  box-shadow: 2px 3px 10px -1px rgba(172, 172, 172, 0.37);
+  color: rgba(109, 109, 109, 0.815);
+}
+.play--send:hover {
+  background-color: #c0c0c033;
 }
