@@ -19,7 +19,6 @@ ctx.stroke();
 ctx.fillStyle = "white";
 
 
-
 saveBtn.addEventListener('click', () => {
   downloadSVG;
 });
@@ -35,6 +34,7 @@ const downloadSVG = () => {
   a.click();
   URL.revokeObjectURL(blobURL);
 };
+
 handleModeClick();
 function handleModeClick(){
  canvas.isDrawingMode = !canvas.isDrawingMode;
