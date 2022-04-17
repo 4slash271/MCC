@@ -66,14 +66,14 @@
   cursor: url('../src/img/vase.cur'), auto;
 }
 
-.mail {
+#mail {
   float: left;
   width: 95%;
   height: 9em;
   margin-top: 1em;
   box-sizing: border-box;
 }
-.mail input,
+#mail input,
 .play--message {
   box-shadow: 2px 3px 10px -1px rgba(172, 172, 172, 0.37);
   border-radius: 5px;
@@ -81,8 +81,8 @@
   height: 2em;
   border: 1px solid #a1a1a183;
 }
-.mail input:focus,
-.mail textarea:focus {
+#mail input:focus
+/* .mail textarea:focus  */ {
   border: 1.5px solid rgba(248, 101, 81, 0.507);
 }
 input::placeholder,
@@ -113,7 +113,7 @@ input::placeholder,
 .play--message span {
   margin-left: 1em;
 }
-.play--message:focus,
+/* .play--message:focus, */
 .play--message:hover {
   border: 1px solid #a1a1a183;
 }
