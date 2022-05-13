@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,34 +10,53 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="https://cdn.rawgit.com/magicien/undo-canvas/v0.1.3/undo-canvas.js"></script>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
     <link type="text/css" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
     <!-- <script src="../js/jquery-3.6.0.min.js"></script> -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
             // https://dashboard.emailjs.com/admin/account
-            emailjs.init('QXOdVC4wDXnmyJUHz');
+            emailjs.init("_0KdknuxpnQ4sjrvY");
         })();
-        </script>
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document
+                .getElementById("mail")
+                .addEventListener("submit", function(event) {
+                    event.preventDefault();
+                    // these IDs from the previous steps
+                    emailjs.sendForm("service_mcc", "template_ta5movq", this).then(
+                        function() {
+                            console.log("SUCCESS!");
+                        },
+                        function(error) {
+                            console.log("FAILED...", error);
+                        }
+                    );
+                });
+        };
+    </script>
     <script src="../js/fabric.min.js"></script>
     <style>
         * {
-  cursor: url('../src/img/cursor.cur'), auto;
-  cursor: -webkit-image-set(url('../src/img/cursor.cur')) 128 128;
-}
+            cursor: url('../src/img/cursor.cur'), auto;
+            cursor: -webkit-image-set(url('../src/img/cursor.cur')) 128 128;
+        }
     </style>
-    
+
     <title>환상동물릴레이조각</title>
 </head>
+
 <body>
-   
+
     <div class="btn__wrapper">
-         <i class="btn bt-prev bi bi-chevron-left" ></i>
-         <i class="btn bt-next bi bi-chevron-right"></i>
-        
+        <i class="btn bt-prev bi bi-chevron-left"></i>
+        <i class="btn bt-next bi bi-chevron-right"></i>
+
     </div>
-   <div class="main wrapper">
+    <div class="main wrapper">
         <header class="header">
             <h1 class="title">Magical Creatures Constructor</h1>
             <div class="title">
@@ -47,160 +67,160 @@
                     <li>조각</li>
                 </ul>
             </div>
-          
+
         </header>
         <div class="content"></div>
         <footer class="footer">
             <h3 class="credit">Women's Lap Top</h3>
         </footer>
-        
-   </div>
 
-   <div class="about wrapper">
-    <header class="header">   
-        <h3 class="title">환상동물릴레이조각이란?</h3>        
-    </header>
-    <div class="content">
-        <div class="tarot__deck">
-            <div class="tarot">
-            </div>
-            <div class="tarot">
-            </div>
-            <div class="tarot">
-            </div>
-        </div>
     </div>
-    <div class="modal--tarot">
-   
-      <div class="tarot__inner">
-            <div class="tarot1">
+
+    <div class="about wrapper">
+        <header class="header">
+            <h3 class="title">환상동물릴레이조각이란?</h3>
+        </header>
+        <div class="content">
+            <div class="tarot__deck">
+                <div class="tarot">
+                </div>
+                <div class="tarot">
+                </div>
+                <div class="tarot">
+                </div>
             </div>
-            <div class="tarot2">
-            </div>
-            <div class="tarot3">
-            </div>
-      </div>
-        <div class="tarot__desc">
-          
         </div>
-        <button class="bt-close">
+        <div class="modal--tarot">
+
+            <div class="tarot__inner">
+                <div class="tarot1">
+                </div>
+                <div class="tarot2">
+                </div>
+                <div class="tarot3">
+                </div>
+            </div>
+            <div class="tarot__desc">
+
+            </div>
+            <button class="bt-close">
             <svg width="18" height="16" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m4.21 4.387.083-.094a1 1 0 0 1 1.32-.083l.094.083L12 10.585l6.293-6.292a1 1 0 1 1 1.414 1.414L13.415 12l6.292 6.293a1 1 0 0 1 .083 1.32l-.083.094a1 1 0 0 1-1.32.083l-.094-.083L12 13.415l-6.293 6.292a1 1 0 0 1-1.414-1.414L10.585 12 4.293 5.707a1 1 0 0 1-.083-1.32l.083-.094-.083.094Z" fill="#212121"/></svg>
         </button>
-   
-    </div>
-   </div>
 
-   <div class="gallery wrapper">
-    <header class="header">
-        <h3 class="title">갤러리</h3>
-    </header>
-    <div class="content">
-        <div class="album">
-            
-            <div class="frame">
-                <a href="#">
-                    <video src="../src/img/MCC_gallery.m4v" width="150px" height="150px" autoplay loop playsinline></video>
- 
-                    <div class="desc"><span>김슬기의 상상지렁이</span></div>
-                </a>
-            </div>
-            <div class="frame">
-                <a href="#">
-                    <video src="../src/img/MCC_gallery.m4v" width="150px" height="150px" autoplay loop playsinline></video>
- 
-                    <div class="desc"><span>김슬기의 상상지렁이</span></div>
-                </a>
-            </div>
-            <div class="frame">
-                <a href="#">
-                    <video src="../src/img/MCC_gallery.m4v" width="150px" height="150px" autoplay loop playsinline></video>
- 
-                    <div class="desc"><span>김슬기의 상상지렁이</span></div>
-                </a>
-            </div>
-            <div class="frame">
-                <a href="#">
-                    <video src="../src/img/MCC_gallery.m4v" width="150px" height="150px" autoplay loop playsinline></video>
- 
-                    <div class="desc"><span>김슬기의 상상지렁이</span></div>
-                </a>
-            </div>
-            <div class="frame">
-                <a href="#">
-                    <video src="../src/img/MCC_gallery.m4v" width="150px" height="150px" autoplay loop playsinline></video>
- 
-                    <div class="desc"><span>김슬기의 상상지렁이</span></div>
-                </a>
-            </div>
-            <div class="frame">
-                <a href="#">
-                    <video src="../src/img/MCC_gallery.m4v" width="150px" height="150px" autoplay loop playsinline></video>
- 
-                    <div class="desc"><span>김슬기의 상상지렁이</span></div>
-                </a>
-            </div>
-         
-           
         </div>
     </div>
-    
-    
-</div>
 
-<div class="play wrapper">
-    <header class="header">
-    
-        <h3 class="title">플레이</h3>
-    </header>
-      
-      <div class="content">
-            <div class="canvas"> 
+    <div class="gallery wrapper">
+        <header class="header">
+            <h3 class="title">갤러리</h3>
+        </header>
+        <div class="content">
+            <div class="album">
+
+                <div class="frame">
+                    <a href="#">
+                        <video src="../src/img/MCC_gallery.m4v" width="150px" height="150px" autoplay loop playsinline></video>
+
+                        <div class="desc"><span>김슬기의 상상지렁이</span></div>
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <video src="../src/img/MCC_gallery.m4v" width="150px" height="150px" autoplay loop playsinline></video>
+
+                        <div class="desc"><span>김슬기의 상상지렁이</span></div>
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <video src="../src/img/MCC_gallery.m4v" width="150px" height="150px" autoplay loop playsinline></video>
+
+                        <div class="desc"><span>김슬기의 상상지렁이</span></div>
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <video src="../src/img/MCC_gallery.m4v" width="150px" height="150px" autoplay loop playsinline></video>
+
+                        <div class="desc"><span>김슬기의 상상지렁이</span></div>
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <video src="../src/img/MCC_gallery.m4v" width="150px" height="150px" autoplay loop playsinline></video>
+
+                        <div class="desc"><span>김슬기의 상상지렁이</span></div>
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <video src="../src/img/MCC_gallery.m4v" width="150px" height="150px" autoplay loop playsinline></video>
+
+                        <div class="desc"><span>김슬기의 상상지렁이</span></div>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="play wrapper">
+        <header class="header">
+
+            <h3 class="title">플레이</h3>
+        </header>
+
+        <div class="content">
+            <div class="canvas">
                 <canvas height="350" width="350" id="c">
             </canvas>
-              <div class="palette">
-                 <button id="jsMode" class="palette--btn">
+                <div class="palette">
+                    <button id="jsMode" class="palette--btn">
                     <i class="far fa-hand-paper"></i>
-                </button>  
-                 <button id="jsDelete" class="palette--btn">
+                </button>
+                    <button id="jsDelete" class="palette--btn">
                     <i class="fas fa-eraser"></i>
-                </button>  
-                <button id="jsUndo" class="palette--btn">  
+                </button>
+                    <button id="jsUndo" class="palette--btn">  
                   <i class="fas fa-undo"></i>
-                </button>      
-                <button id="jsRedo" class="palette--btn">
+                </button>
+                    <button id="jsRedo" class="palette--btn">
                   <i class="fas fa-redo"></i>
-                </button>      
-                      
-      
-              </div>
-            
+                </button>
+
+
+                </div>
+
             </div>
 
-           <form id="mail">
-                <input class="play--writer"type="text" name="name"  placeholder="닉네임" required/>
-                <input class="play--mail"type="email" name="mail" placeholder="메일주소" required/>
-                <input class="play--address"type="text" name="address" placeholder="조각으로 완성된 후 배송됩니다. 배송예정지를 남겨주세요" required/>
-                <textarea autofocus="autofocus" class="play--message" name="message"  cols="30" rows="10" placeholder="드로잉에 대한 설명을 남겨주세요." required></textarea>
-               
-            
-                <button id="jsSend" class="play--send"  type="submit" value="Send"
-                >
-                    <i class="fab fa-telegram-plane"></i></a>
-                   </button>  
-                </form>
-      
-
-      </div>    
-</div>
+            <form id="mail">
+                <input class="play--writer" type="text" name="user_name" placeholder="닉네임" required/>
+                <input class="play--mail" type="email" name="user_email" placeholder="메일주소" required/>
+                <input class="play--address" type="text" name="user_address" placeholder="조각으로 완성된 후 배송됩니다. 배송예정지를 남겨주세요" required/>
+                <textarea autofocus="autofocus" class="play--message" name="message" cols="30" rows="10" placeholder="드로잉에 대한 설명을 남겨주세요." required></textarea>
 
 
+                <input id="jsSend" class="play--send" type="submit" value="Send" />
+                <i class="fab fa-telegram-plane"></i></a>
+                </input>
+            </form>
 
-<script src="../js/flip.js"></script>
-<script src="../js/tarot.js"></script>
-<script src="../js/play.js"></script>
-<script src="../js/email.js"></script>
+
+        </div>
+    </div>
+
+
+
+    <script src="../js/flip.js"></script>
+    <script src="../js/tarot.js"></script>
+    <script src="../js/play.js"></script>
+
 
 
 
 </body>
+
 </html>
