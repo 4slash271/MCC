@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Form</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init("_0KdknuxpnQ4sjrvY");
+        })();
+    </script>
+    <script type="text/javascript">
+        function formSubmit(event) {
+            event.preventDefault();
+            emailjs.sendForm("service_mcc", "template_ta5movq", this);
+        }
+    </script>
+</head>
+
+<body>
+    <form onsubmit="formSubmit()">
+        <label>Attach file:</label>
+        <input type="file" name="my_file" />
+        <input type="submit" value="Send" />
+    </form>
+</body>
+
+</html>
