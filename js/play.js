@@ -1,6 +1,6 @@
 const canvas = new fabric.Canvas("c");
 const ctx = canvas.getContext("2d");
-const saveBtn = document.getElementById("jsSave");
+const saveBtn = document.getElementById("jsSend");
 const undoBtn = document.getElementById("jsUndo");
 const redoBtn = document.getElementById("jsRedo");
 const modeBtn = document.getElementById("jsMode");
@@ -18,27 +18,21 @@ ctx.closePath();
 ctx.stroke();
 ctx.fillStyle = "white";
 
-// saveBtn.addEventListener("click", () => {
-//     downloadSVG;
-// });
+saveBtn.addEventListener("click", () => {
+    downloadSVG;
+});
 
-// const downloadSVG = () => {
-//     const svg = canvas.toSVG();
-//     const a = document.createElement("a");
-//     const blob = new Blob([svg], { type: "image/svg+xml" });
-//     const blobURL = URL.createObjectURL(blob);
-//     a.href = blobURL;
-//     a.download = "my_drawing.svg";
-//     a.click();
-//     URL.revokeObjectURL(blobURL);
-// };
+const downloadSVG = () => {
+    const svg = canvas.toSVG();
+    const a = document.createElement("a");
+    const blob = new Blob([svg], { type: "image/svg+xml" });
+    const blobURL = URL.createObjectURL(blob);
+    a.href = blobURL;
+    a.download = "my_drawing.svg";
+    a.click();
+    URL.revokeObjectURL(blobURL);
+};
 
-// function sendCanvasAsAttachment(canvas) {
-//     var base64 = canvas.toDataURL();
-//     emailjs.send("service_mcc", "template_ta5movq", {
-//         content: base64,
-//     });
-// }
 handleModeClick();
 
 function handleModeClick() {
