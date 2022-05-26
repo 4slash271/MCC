@@ -20,24 +20,6 @@
             emailjs.init("_0KdknuxpnQ4sjrvY");
         })();
     </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document
-                .getElementById("mail")
-                .addEventListener("submit", function(event) {
-                    event.preventDefault();
-                    // these IDs from the previous steps
-                    emailjs.sendForm("service_mcc", "template_ta5movq", this).then(
-                        function() {
-                            console.log("SUCCESS!");
-                        },
-                        function(error) {
-                            console.log("FAILED...", error);
-                        }
-                    );
-                });
-        };
-    </script>
     <script src="../js/fabric.min.js"></script>
     <style>
         * {

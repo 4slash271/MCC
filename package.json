@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@emailjs/browser": "^3.6.2"
+    "@emailjs/browser": "^3.6.2",
+    "jslint": "^0.12.1"
   }
 }

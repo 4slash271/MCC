@@ -4,9 +4,11 @@ const saveBtn = document.getElementById("jsSend");
 const undoBtn = document.getElementById("jsUndo");
 const redoBtn = document.getElementById("jsRedo");
 const modeBtn = document.getElementById("jsMode");
-const svg = document.getElementsByClassName("canvas");
+// const svg = document.getElementsByClassName("canvas");
 let drawing = true;
 let moving = false;
+
+
 
 // function stopDrawing(){drawing = false;}
 // function startDrawing(){drawing = true;}
@@ -18,20 +20,38 @@ ctx.closePath();
 ctx.stroke();
 ctx.fillStyle = "white";
 
-saveBtn.addEventListener("click", () => {
-    downloadSVG;
-});
+window.onload = function() {
+    document.getElementById("mail").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-const downloadSVG = () => {
-    const svg = canvas.toSVG();
-    const a = document.createElement("a");
-    const blob = new Blob([svg], { type: "image/svg+xml" });
-    const blobURL = URL.createObjectURL(blob);
-    a.href = blobURL;
-    a.download = "my_drawing.svg";
-    a.click();
-    URL.revokeObjectURL(blobURL);
+    const userName = document.querySelector(".play--writer").value;
+    const userEmail = document.querySelector(".play--mail").value;
+    const userAddress = document.querySelector(".play--address").value;
+    const userMessage = document.querySelector(".play--message").value;
+
+    var img = canvas.toSVG();
+          const blob = new Blob([img], { type: "image/svg+xml" });
+          const blobURL = URL.createObjectURL(blob);
+          URL.revokeObjectURL(blobURL);
+     
+     var data = {
+            content: img,
+            user_name:userName,
+            user_email:userEmail,
+            user_address:userAddress,
+            message:userMessage,       
+         };
+
+
+
+     emailjs.send("service_mcc", "template_ta5movq",data)
+            
+
+     });
+
 };
+
+
 
 handleModeClick();
 
