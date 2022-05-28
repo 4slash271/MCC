@@ -30,37 +30,29 @@ window.onload = function() {
     const userMessage = document.querySelector(".play--message").value;
 
 
-// var img = () => {
-//     const svg = canvas.toSVG();
-//     // const a = document.createElement("a");
-//     const blob = new Blob([svg], { type: "image/svg+xml" });
-//     const blobURL = URL.createObjectURL(blob);
-//     // a.href = blobURL;
-//     // a.download = "my_drawing.svg";
-//     // a.click();
-//     URL.revokeObjectURL(blobURL);
 
-
-// };
-
-
-const svg = canvas.toSVG();
-var svgBlob = new Blob([svg], {type:"image/svg+xml"});
-var svgUrl = URL.createObjectURL(svgBlob);
-var downloadLink = document.createElement("a");
-downloadLink.href = svgUrl;
-downloadLink.download = "newesttree.svg";
+    const svg = canvas.toDataURL();
+    // const a = document.createElement("a");
+    // const blob = new Blob([svg], { type: "image/svg+xml" });
+    // const blobURL = URL.createObjectURL(blob);
+    // a.href = blobURL;
+    // a.download = "my_drawing.svg";
+    // a.click();
+    // URL.revokeObjectURL(blobURL);
 
 
 
+// const svg = canvas.toSVG();
+// var svgBlob = new Blob([svg], {type:"image/svg+xml"});
+// var svgUrl = URL.createObjectURL(svgBlob);
+// var downloadLink = document.createElement("a");
+// downloadLink.href = svgUrl;
+// downloadLink.download = "newesttree.svg";
 
-// let fileImg = img();
-//     //   const img = canvas.toDataURL();
-//     //   const blob = new Blob([img], { type: "image/svg+xml" });
     
      
      var data = {
-            content:svgBlob,
+            content:svg,
             user_name:userName,
             user_email:userEmail,
             user_address:userAddress,
