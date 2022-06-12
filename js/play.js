@@ -72,8 +72,11 @@ function handleModeClick() {
         canvas.freeDrawingBrush.color= DELETE_COLOR;
         canvas.freeDrawingBrush.width=25;
         modeBtn.innerHTML = "<i class='fas fa-pencil-alt'></i>";
-        event.preventDefault();
-     
+        colorPicker.addEventListener("input", handleEraserClick);
+        function handleEraserClick(e)
+     {
+        canvas.freeDrawingBrush.color= DELETE_COLOR;
+     }
     }
 } 
 
