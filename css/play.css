@@ -63,7 +63,15 @@
   transform: scale(1.05);
 }
 .palette--btn:last-child {
-  cursor: url('../src/img/vase.cur'), auto;
+  cursor: url('../src/img/Magnifying\ Glass.cur'), auto;
+}
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type='color']::-webkit-color-swatch {
+  background: url('../src/img/plt-100.jpg') no-repeat center;
+  border: none;
+  border-radius: 8px;
 }
 
 #mail {
