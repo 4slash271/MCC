@@ -51,7 +51,14 @@
             </div>
 
         </header>
-        <div class="content"></div>
+        <div class="content">
+            <!--메인 모델링 캔버스-->
+            <canvas id="mainCanvas" width="500" height="500"></canvas>
+
+
+
+
+        </div>
         <footer class="footer">
             <h3 class="credit">Women's Lap Top</h3>
         </footer>
@@ -192,6 +199,60 @@
 
         </div>
     </div>
+    <script type="importmap">
+
+    {
+        "imports": {
+          "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+          "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js",
+          "OrbitControls":"https://unpkg.com/three@0.141.0/examples/jsm/controls/OrbitControls.js"
+        }
+      }
+    </script>
+
+    <script type="module">
+        import {GLTFLoader} from 'GLTFLoader';
+        import { OrbitControls } from 'OrbitControls';
+        import * as THREE from 'three';
+
+        let scene = new THREE.Scene();
+        let renderer =new THREE.WebGLRenderer({
+            canvas : document.querySelector('#mainCanvas'),
+            antialias : true
+        })
+        renderer.outputEncoding = THREE.sRGBEncoding;
+
+        let camera = new THREE.PerspectiveCamera(30,1);
+        camera.position.set(0,0,500)
+
+        const controls = new OrbitControls( camera, renderer.domElement );
+			controls.target.set( 0, 0.5, 0 );
+			controls.update();
+			controls.enablePan = false;
+			controls.enableDamping = true;
+
+
+        scene.background = new THREE.Color('#2e2929');
+        let light = new THREE.DirectionalLight(0xffff00,10);
+        scene.add(light);
+
+        let loader = new GLTFLoader();
+        loader.load("../src/modeling/seasonal_allergies_metal.glb", function(gltf){
+            scene.add(gltf.scene);
+          
+            function animate(){
+                requestAnimationFrame(animate)
+                gltf.scene.rotation.y += 0.01;  
+               
+                renderer.render(scene, camera);
+                controls.update();
+            }
+            animate()
+
+        })
+        
+
+    </script>
 
 
 
