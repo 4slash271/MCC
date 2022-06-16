@@ -20,13 +20,12 @@
 }
 .tarot__deck {
   position: relative;
-  /* border: 1px solid red; */
 }
 .tarot {
   cursor: url('../src/img/hand.cur'), auto;
   transform: rotate(0deg);
   position: absolute;
-  top: 4em;
+  top: 8em;
   right: -6.5em;
   margin: 0 auto;
   width: 200px;
@@ -55,17 +54,17 @@
 }
 .tarot__deck:hover .tarot:first-child {
   transform: rotate(10deg);
-  top: 5em;
+  top: 8em;
   left: -4em;
 }
 .tarot__deck:hover .tarot:nth-child(2) {
   transform: rotate(-15deg);
-  top: 5em;
+  top: 8em;
   left: -6em;
 }
 .tarot__deck:hover .tarot:last-child {
   transform: rotate(-30deg);
-  top: 6em;
+  top: 9em;
   left: -10em;
 }
 
