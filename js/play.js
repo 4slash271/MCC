@@ -1,4 +1,5 @@
 const canvas = new fabric.Canvas("c");
+const mainWrapper = document.querySelector(".play.wrapper");
 fabric.Object.prototype.transparentCorners = false;
 canvas.selection = false;
 const ctx = canvas.getContext("2d");
@@ -7,6 +8,9 @@ const undoBtn = document.getElementById("jsUndo");
 const redoBtn = document.getElementById("jsRedo");
 const modeBtn = document.getElementById("jsMode");
 let colorPicker = document.getElementById("jsColor");
+const check = document.querySelector(".bt-check");
+const reject = document.querySelector(".bt-reject");
+const modal = document.querySelector(".modal");
 canvas.isDrawingMode = true;
 let drawing = true;
 let deleting = false;
@@ -20,31 +24,60 @@ let moving = false;
 // ctx.closePath();
 // ctx.stroke();
 // ctx.fillStyle = "white";
+// window.onresize = function(){
+//     console.log(mainWrapper.clientWidth);
+//     console.log(canvas.width);
+//     canvas.width = mainWrapper.clientWidth* 0.6 +'px';
+//     canvas.height = mainWrapper.clientWidth* 0.6 +'px';
+// }
 
-    
-window.onload = function() {
-    document.getElementById("mail").addEventListener("submit", function(event) {
-    event.preventDefault();
 
-    const userName = document.querySelector(".play--writer").value;
-    const userEmail = document.querySelector(".play--mail").value;
-    const userAddress = document.querySelector(".play--address").value;
-    const userMessage = document.querySelector(".play--message").value;
+    function checkedBox(event){
+            if(event.target.checked)  {
+                modal.classList.remove("hidden");
+                check.addEventListener('click',function(){
+                    modal.classList.add("hidden");
+                })
+                reject.addEventListener('click',function(){
+                    parent.document.location.reload()
 
-    const svg = canvas.toDataURL();
+                })
+              }
+       
+              else {
+                modal.classList.add("hidden");
+               
 
-     var data = {
-            content:svg,
-            user_name:userName,
-            user_email:userEmail,
-            user_address:userAddress,
-            message:userMessage,    
-         };
-     emailjs.send("service_mcc", "template_ta5movq",data)
 
-     });
-
-};
+              }
+    }
+        window.onload = function() {
+            document.getElementById("mail").addEventListener("submit", function(event) {
+            event.preventDefault();
+        
+            const userName = document.querySelector(".play--writer").value;
+            const userEmail = document.querySelector(".play--mail").value;
+            const userAddress = document.querySelector(".play--address").value;
+            const userMessage = document.querySelector(".play--message").value;
+        
+            const svg = canvas.toDataURL();
+        
+             var data = {
+                    content:svg,
+                    user_name:userName,
+                    user_email:userEmail,
+                    user_address:userAddress,
+                    message:userMessage,    
+                 };
+             emailjs.send("service_mcc", "template_ta5movq",data).then(function(){
+                parent.document.location.reload()
+             })
+        
+             });
+        
+        };
+        
+        
 
 
 handleModeClick();

@@ -58,8 +58,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  /* overflow-y: hidden; */
 }
 
 .wrapper {
@@ -132,24 +130,99 @@ h3.title {
 /*************************                *************************/
 
 /*************************      responsive          *************************/
-/* 
-@media (max-width: 2400px) {
-  .wrapper {
-    width: 25%;
-  }
+
+@media (max-width: 3840px) {
 }
-@media (max-width: 1800px) {
-  .wrapper {
-    width: 33.333%;
-  }
+@media (max-width: 2560px) {
 }
-@media (max-width: 1200px) {
-  .wrapper {
-    width: 50%;
-  }
+
+@media (max-width: 1920px) {
 }
-@media (max-width: 600px) {
+@media (max-width: 1500px) {
+  body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
   .wrapper {
+    height: 90%;
+    width: 33%;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border: 1px solid var(--tuatara);
+  }
+  .btn__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 40em;
     width: 100%;
   }
-} */
+  .btn {
+    font-size: 6.5em;
+    z-index: 9999;
+  }
+  .btn:hover {
+    cursor: url('../src/img/hand.cur'), auto;
+    transform: scale(1.2);
+    cursor: -webkit-image-set(url('../src/img/hand.cur')) 128 128;
+  }
+  .bt-prev {
+    margin-left: 1em;
+  }
+  .bt-next {
+    margin-right: 1em;
+  }
+}
+@media (max-width: 1280px) {
+  .wrapper {
+    height: 90%;
+    width: 33%;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border: 1px solid var(--tuatara);
+  }
+  .bt-prev {
+    margin-left: 0.8em;
+  }
+  .bt-next {
+    margin-right: 0.8em;
+  }
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    height: 90%;
+    width: 33%;
+    /* overflow: hidden; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border: 1px solid var(--tuatara);
+  }
+  .bt-prev {
+    margin-left: 0.8em;
+  }
+  .bt-next {
+    margin-right: 0.8em;
+  }
+}
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+}

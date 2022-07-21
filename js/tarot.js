@@ -9,7 +9,7 @@ let btnClose = document.querySelector('.modal--tarot .bt-close');
 function openTarot(){
     tarotModal.style.display="flex";
     firstCard.style.display="flex";
-    desc.innerHTML = '<span><div class="desc--title">환상동물릴레이조각</div><br>사용자는 환상동물 그림을 제출할 수 있습니다.<br>다른 사용자들의 그림을 구경해보세요.<br>관리자는 사용자가 제출한 그림을 바탕으로 디지털 조각을 만듭니다. 프로젝트 종료 후에 사용자는 3D 프린터로 출력된 자신의 환상동물 조각을 보상으로 받게 됩니다.<br><div class="desc--credit">기획 | 김슬기<br>웹 그리고 모델링| 김슬기</div></span>';
+    desc.innerHTML = '<span><div class="desc--title">환상동물릴레이조각</div><br>사용자는 환상동물 그림을 제출할 수 있습니다.<br>관리자는 사용자가 제출한 그림을 바탕으로 디지털 조각을 만듭니다. <br>다른 사용자들의 그림과 조각을 구경해보세요. <br> 프로젝트 종료 후에 사용자는 3D 프린터로 출력된 자신의 환상동물 조각을 보상으로 받게 됩니다.<br><div class="desc--credit">기획 | 김슬기<br>웹 그리고 모델링| 김슬기</div></span>';
 };
 
 function slideFirst(){    

@@ -32,6 +32,21 @@
 </head>
 
 <body>
+    <div class="modal hidden">
+        <div class="modal--pic"></div>
+        <div class="modal--text">
+            <span>환상동물릴레이조각에 사용자가 제출한 
+                <p class="highlight">닉네임</p>, 
+                <p class="highlight">이메일</p>, 
+                <p class="highlight1">주소</p>, 
+                <p class="highlight2">요청사항</p> 그리고 
+                <p class="highlight">드로잉</p>이 전송되며,
+                <br> <p class="highlight">닉네임</p>과  <p class="highlight">드로잉</p>은 추후  <p class="highlight3">아카이빙</p> 용도로 사용될 수 있습니다. 
+                <br><p class="highlight4">동의하십니까?</p></span>
+        </div>
+        <div class="modal--confirm"><i class="bt-confirm bt-check bi-check-circle-fill">동의합니다</i>
+       <i class="bt-confirm bt-reject bi bi-x-circle">동의하지 않습니다.</i></div>
+    </div>
 
     <div class="btn__wrapper">
         <i class="btn bt-prev bi bi-chevron-left"></i>
@@ -53,7 +68,7 @@
         </header>
         <div class="content">
             <!--메인 모델링 캔버스-->
-            <canvas id="mainCanvas" width="500" height="500"></canvas>
+            <canvas id="mainCanvas" width="1000" height="1000"></canvas>
 
 
 
@@ -101,51 +116,149 @@
 
     <div class="gallery wrapper">
         <header class="header">
-            <h3 class="title">갤러리</h3>
+            <h3 class="title">릴레이 조각 모아보기</h3>
         </header>
         <div class="content">
             <div class="album">
-
                 <div class="frame">
                     <a href="#">
-                        <canvas id="galleryCanvas1" width="150" height="150"></canvas>
-                        <div class="desc"><span>김슬기의 상상지렁이</span></div>
+                        <canvas id="galleryCanvas1" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
                     </a>
                 </div>
                 <div class="frame">
                     <a href="#">
-
-                        <div class="desc"><span>김슬기의 상상지렁이</span></div>
+                        <canvas id="galleryCanvas2" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
                     </a>
                 </div>
                 <div class="frame">
                     <a href="#">
-                        
-
-                        <div class="desc"><span>김슬기의 상상지렁이</span></div>
+                        <canvas id="galleryCanvas3" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
                     </a>
                 </div>
                 <div class="frame">
                     <a href="#">
-                        
-
-                        <div class="desc"><span>김슬기의 상상지렁이</span></div>
+                        <canvas id="galleryCanvas4" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
                     </a>
                 </div>
                 <div class="frame">
                     <a href="#">
-                       
-
-                        <div class="desc"><span>김슬기의 상상지렁이</span></div>
+                        <canvas id="galleryCanvas5" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
                     </a>
                 </div>
                 <div class="frame">
                     <a href="#">
-                        
-
-                        <div class="desc"><span>김슬기의 상상지렁이</span></div>
+                        <canvas id="galleryCanvas6" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
                     </a>
                 </div>
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas7" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas8" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas9" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas1" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas10" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas1" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas11" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas12" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas13" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas14" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+               
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas15" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+               
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas16" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+               
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas1" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+               
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas17" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+               
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas18" width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+               
+                <div class="frame">
+                    <a href="#">
+                        <canvas id="galleryCanvas19"width="200px" height="200px"></canvas>
+                        <!-- <div class="desc"><span>김슬기의 상상지렁이</span></div> -->
+                    </a>
+                </div>
+               
 
 
             </div>
@@ -157,12 +270,12 @@
     <div class="play wrapper">
         <header class="header">
 
-            <h3 class="title">플레이</h3>
+            <h3 class="title">릴레이 조각 참여하기</h3>
         </header>
 
         <div class="content">
             <div class="canvas">
-                <canvas height="350" width="350" id="c">
+                <canvas height="730" width="730" id="c">
             </canvas>
                 <div class="palette">
                     <button id="jsMode" class="palette--btn">
@@ -187,11 +300,18 @@
                 <input class="play--mail" type="email" name="user_email" placeholder="메일주소" required/>
                 <input class="play--address" type="text" name="user_address" placeholder="조각으로 완성된 후 배송됩니다. 배송예정지를 남겨주세요" required/>
                 <textarea autofocus="autofocus" class="play--message" name="message" cols="30" rows="10" placeholder="드로잉에 대한 설명을 남겨주세요." required></textarea>
+             <div class="send--wrapper">
+                 
+                    <button id="jsSend" class="play--send" type="submit" value="Send"> <p>전송하기</p>
+                    <i class="fab fa-telegram-plane"></i></a>
+                    </button>
 
-
-                <button id="jsSend" class="play--send" type="submit" value="Send">
-                <i class="fab fa-telegram-plane"></i></a>
-                </button>
+                    <div class="play--confirm" >
+                        <p>정보 제공에 동의합니다.</p>
+                           <input  type="checkbox" name="confirmBox" id="jsConfirm" onclick="checkedBox(event)" required/>
+                  </div>
+                 
+             </div>
             </form>
 
 
@@ -251,6 +371,7 @@
         
 
     </script>
+
     <script type="module">
         import {GLTFLoader} from 'GLTFLoader';
         import { OrbitControls } from 'OrbitControls';
@@ -273,7 +394,56 @@
 			controls.enableDamping = true;
 
 
-        scene.background = new THREE.Color('#2e2929');
+        scene.background = new THREE.Color('#fff');
+        let light = new THREE.DirectionalLight(0xffff00,10);
+        scene.add(light);
+
+        let loader = new GLTFLoader();
+        loader.load("../src/modeling/seasonal_allergies_metal.glb", function(gltf){
+            scene.add(gltf.scene);
+          
+            function animate(){
+                requestAnimationFrame(animate)
+                gltf.scene.rotation.x += 0.01;  
+               
+                renderer.render(scene, camera);
+                controls.update();
+            }
+            animate()
+
+            // canvas.addEventListener("mouseover",drawingOpen);
+            // function drawingOpen(e){
+            //     canvas.style.display="none";
+
+            // }
+
+        })
+        
+
+    </script>
+    <script type="module">
+        import {GLTFLoader} from 'GLTFLoader';
+        import { OrbitControls } from 'OrbitControls';
+        import * as THREE from 'three';
+
+        let scene = new THREE.Scene();
+        let renderer =new THREE.WebGLRenderer({
+            canvas : document.querySelector('#galleryCanvas2'),
+            antialias : true
+        })
+        renderer.outputEncoding = THREE.sRGBEncoding;
+
+        let camera = new THREE.PerspectiveCamera(30,1);
+        camera.position.set(0,0,500)
+
+        const controls = new OrbitControls( camera, renderer.domElement );
+			controls.target.set( 0, 0.5, 0 );
+			controls.update();
+			controls.enablePan = false;
+			controls.enableDamping = true;
+
+
+        scene.background = new THREE.Color('#fff');
         let light = new THREE.DirectionalLight(0xffff00,10);
         scene.add(light);
 
