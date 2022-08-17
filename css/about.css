@@ -4,7 +4,7 @@
   z-index: 1;
   position: absolute;
   background-color: var(--white);
-  right: 17%;
+  right: 15%;
   display: flex;
   flex-direction: column;
   border-top: 15px solid var(--red) !important;
@@ -189,5 +189,104 @@
     transform: rotateY(-180deg);
     background: url('../src/img/world.png') no-repeat center;
     background-size: cover;
+  }
+}
+/******************************       RESPONSIVE        *****************************************/
+@media (max-width: 1800px) {
+  .tarot {
+    right: -7.5em;
+    width: 242px;
+    height: 400px;
+  }
+  .tarot__deck:hover .tarot:first-child {
+    transform: rotate(10deg);
+    top: 8em;
+    left: -6em;
+  }
+  .tarot__deck:hover .tarot:nth-child(2) {
+    transform: rotate(-15deg);
+    top: 8em;
+    left: -8em;
+  }
+  .tarot__deck:hover .tarot:last-child {
+    transform: rotate(-30deg);
+    top: 9em;
+    left: -12em;
+  }
+  .modal--tarot .tarot1,
+  .modal--tarot .tarot2,
+  .modal--tarot .tarot3 {
+    cursor: url('../src/img/hand.cur'), auto;
+    width: 200px;
+    height: 330px;
+    border-radius: 10px;
+    border: 7px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 1px 1px rgba(161, 161, 161, 0.199);
+    margin-top: 2em;
+  }
+  .modal--tarot .tarot__desc {
+    margin-top: 10em;
+    width: 80%;
+    height: 180px;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    /* border: 2px solid red; */
+  }
+}
+@media (max-width: 1600px) {
+  .about {
+    right: 10%;
+  }
+  .tarot {
+    right: -6.5em;
+    width: 220px;
+    height: 360px;
+  }
+  .modal--tarot .bt-close {
+    top: 5em;
+    right: 5.5em;
+  }
+}
+@media (max-width: 1400px) {
+  .tarot {
+    right: -6em;
+    width: 200px;
+    height: 330px;
+  }
+  .tarot__deck:hover .tarot:nth-child(2) {
+    transform: rotate(-10deg);
+    top: 8em;
+    left: -8em;
+  }
+  .tarot__deck:hover .tarot:last-child {
+    transform: rotate(-30deg);
+    top: 9em;
+    left: -10em;
+  }
+  .modal--tarot .bt-close {
+    top: 5em;
+    right: 5.5em;
+  }
+}
+@media (max-width: 1300px) {
+  .tarot {
+    top: 12em;
+    right: -5.5em;
+    width: 180px;
+    height: 297px;
+  }
+  .tarot__deck:hover .tarot:nth-child(2) {
+    transform: rotate(-10deg);
+    top: 8em;
+    left: -8em;
+  }
+  .tarot__deck:hover .tarot:last-child {
+    transform: rotate(-30deg);
+    top: 9em;
+    left: -9em;
+  }
+  .modal--tarot .bt-close {
+    top: 6em;
+    right: 5em;
   }
 }

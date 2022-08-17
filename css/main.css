@@ -1,7 +1,7 @@
 /*************************      main(1st page)          *************************/
 .main {
   position: absolute;
-  left: 17%;
+  left: 15%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -79,9 +79,12 @@
 }
 @media (max-width: 1920px) {
 }
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
+  .main {
+    left: 10%;
+  }
 }
-@media (max-width: 1280px) {
+@media (max-width: 1300px) {
 }
 @media (max-width: 1024px) {
 }

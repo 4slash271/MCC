@@ -46,6 +46,13 @@
   --red: rgba(255, 30, 0, 0.76);
 }
 /*************************      body & global          *************************/
+.prohibit {
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #555;
+}
 body {
   cursor: url('../src/img/cursor.cur'), auto;
   cursor: -webkit-image-set(url('../src/img/cursor.cur')) 128 128;
@@ -62,25 +69,14 @@ body {
 
 .wrapper {
   height: 90%;
-  width: 33%;
-  /* overflow: hidden; */
+  width: 35%;
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
-
-  /* height: 500vh; */
   border: 1px solid var(--tuatara);
-  /* background-color: var(--vanilla); */
-  /* background: linear-gradient(
-      165deg,
-      rgba(241, 241, 255, 0.281) 0%,
-      #d3725598 25%
-    )
-    no-repeat center; */
 }
 .content {
   margin: 3em auto;
-  width: 90%;
+  width: 100%;
   height: 85%;
   /* border: 1px solid var(--tuatara); */
   overflow: hidden;
@@ -103,10 +99,10 @@ body {
   cursor: -webkit-image-set(url('../src/img/hand.cur')) 128 128;
 }
 .bt-prev {
-  margin-left: 1.5em;
+  margin-left: 1em;
 }
 .bt-next {
-  margin-right: 1.5em;
+  margin-right: 1em;
 }
 .title {
   font-family: 'SUIT';
@@ -149,16 +145,6 @@ h3.title {
     align-items: center;
   }
 
-  .wrapper {
-    height: 90%;
-    width: 33%;
-    /* overflow: hidden; */
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    border: 1px solid var(--tuatara);
-  }
   .btn__wrapper {
     display: flex;
     align-items: center;
@@ -183,46 +169,29 @@ h3.title {
     margin-right: 1em;
   }
 }
-@media (max-width: 1280px) {
+@media (max-width: 3850px) {
   .wrapper {
     height: 90%;
-    width: 33%;
-    /* overflow: hidden; */
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    border: 1px solid var(--tuatara);
-  }
-  .bt-prev {
-    margin-left: 0.8em;
-  }
-  .bt-next {
-    margin-right: 0.8em;
+    width: 35%;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1600px) {
   .wrapper {
     height: 90%;
-    width: 33%;
-    /* overflow: hidden; */
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    border: 1px solid var(--tuatara);
+    width: 40%;
   }
   .bt-prev {
-    margin-left: 0.8em;
+    margin-left: 0em;
   }
   .bt-next {
-    margin-right: 0.8em;
+    margin-right: 0em;
   }
 }
-@media (max-width: 992px) {
-}
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .prohibit {
+    display: flex;
+  }
 }
 @media (max-width: 576px) {
 }
